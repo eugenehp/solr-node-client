@@ -5,7 +5,7 @@
 // Use `var solr = require('solr-client')` in your code 
 var solr = require('./../lib/solr');
 
-var client = solr.createClient();
+var client = solr.createClient({core:'collection1'});
 
 var field = 'id';
 var query = '*'; // Everything !Dangerous!

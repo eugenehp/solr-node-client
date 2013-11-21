@@ -6,13 +6,13 @@
 var solr = require('./../lib/solr'); 
 
 // Create a client
-var client = solr.createClient();
+var client = solr.createClient({core:'collection1'});
 
 // Switch on "auto commit", by default `client.autoCommit = false`
 client.autoCommit = true;
 
 var docs = [];
-for(var i = 0; i <= 10 ; i++){
+for(var i = 0; i <= 20 ; i++){
    var doc = {
        id : 12345 + i,
        title_t : "Title "+ i,
